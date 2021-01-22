@@ -1,0 +1,156 @@
+<div class="main-content">
+
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand titlePage" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-globe "> </i> الطلبات
+
+                </a>
+
+
+            </div>
+
+
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm12">
+                <div class="card card-plain">
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> الاسم </th>
+                                        <th scope="col"> العنوان </th>
+                                        <th scope="col"> رقم الموبايل </th>
+
+                                        <th scope="col"> صورة المنتج </th>
+
+                                        <th scope="col"> أختيارات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <!-- <tr *ngFor="let prop of homeimageList; let i=index">
+
+                                        <td> {{prop.title}}</td>
+                                        <td><img style="width: 150px; height: 150px;" [src]='prop.imagePath'> </td>
+                                        <td>
+                                            <i class="fa  fa-edit " title="تعديل " (click)="fill(prop)" data-toggle="modal" data-target="#basicExampleModal"></i>
+                                            <i class="fa fa-trash " title="مسح " (click)="delete(i)"></i>
+
+                                        </td>
+                                    </tr> -->
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+        <!-- <nav aria-label="Page navigation example">
+    <ul class="pagination ">
+      <li class="page-item " *ngFor="let item of data"><a class="page-link " (click)="navigate(item)">
+          {{item}}
+        </a></li>
+
+
+    </ul>
+    <div class="col text-center">
+      <h5> الصفحة المعروضه حاليا رقم <span class="activeNumber"> {{pageTitle}} </span>
+      </h5>
+    </div>
+
+  </nav> -->
+    </div>
+</div>
+
+
+
+
+<!-- <div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+
+                    <div class="row">
+
+
+
+
+                        <div class="text-center">
+                            <a class="titleheader">
+              تعديل صورة </a>
+                        </div>
+                    </div>
+
+                </h5>
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <form>
+
+
+
+                        <div class="row">
+                            <div class="form-group col-md-12 col-sm-6 ">
+                                <label> الاسم
+              </label>
+                                <input class="form-control" type="text" name="name" [(ngModel)]="homeimage.title">
+
+
+
+                            </div>
+
+
+                        </div>
+
+                        <div class="row" style="margin-bottom: 25%; margin-top: 5%;">
+                            <div class="col-md-12 col-sm-12 mx-auto" style="position:relative;">
+                                <div class="upload-container services-image" #SlideImg>
+                                    <input #image name="image" class=" " autocomplete="off" (change)="onFileChanged($event,'image')" type="file" accept="image/*">
+                                    <p><i class="fa fa-window-close" (click)="changebackground(SlideImg,'UserImageURL',true,'image')"></i></p>
+                                </div>
+                            </div>
+                        </div>
+
+
+
+                    </form>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mx-auto">
+                        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="saveupdate()">حفظ
+          </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mx-auto">
+                        <button type="button" class="btn bg-cancel btn-block " data-dismiss="modal" (click)="cancel()"> إلغاء
+          </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div> -->

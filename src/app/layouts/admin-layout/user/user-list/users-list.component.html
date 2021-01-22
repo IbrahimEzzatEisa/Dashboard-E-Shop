@@ -1,0 +1,236 @@
+<div class="main-content">
+    <nav class="navbar navbar-expand-lg    ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand titlePage">
+                    <i class="fa fa-users"> </i> المستخدمين
+                </a>
+                <span> <i class="fas fa-arrow-circle-right"></i></span>
+
+
+                <a class="navbar-brand titlePage" data-toggle="modal" data-target="#exampleModal">
+                    <i class="fas fa-plus-circle" data-toggle="modal" data-target="#exampleModal"></i> أضافة مستخدم
+                </a>
+            </div>
+
+
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm12">
+                <div class="card card-plain">
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">أسم المستخدم</th>
+                                        <th scope="col">أسم العائلة</th>
+                                        <th scope="col">البريد الألكتروني</th>
+                                        <th scope="col"> أختيارات</th>
+
+
+
+                                    </tr>
+                                </thead>
+                                <tbody>
+
+                                    <tr *ngFor="let prop of UserList; let i=index">
+                                        <td> {{prop.firstName}}</td>
+                                        <td> {{prop.lastName}}</td>
+                                        <td> {{prop.email}}</td>
+                                        <td>
+                                            <i class="fa  fa-edit " title="تعديل " (click)="fill(prop)" data-toggle="modal" data-target="#basicExampleModal"></i>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+
+                    <div class="row">
+                        <div class="text-center">
+                            <a class="titleheader">
+                أضافة </a>
+                        </div>
+
+                    </div>
+
+                </h5>
+
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+
+                            <div class="form-group col-md-6 col-sm-6">
+                                <label> الأسم الاول
+                </label>
+                                <input class="form-control" name="firstName" [(ngModel)]="user.firstName" autocomplete="off">
+                            </div>
+                            <div class="form-group col-md-6 col-sm-6">
+                                <label> اسم العائلة
+                </label>
+                                <input class="form-control" name="lastName" [(ngModel)]="user.lastName" autocomplete="off">
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="form-group col-md-12 col-sm-6 ">
+                                <label> البريد الالكتروني
+                </label>
+                                <input class="form-control" type="email" name="email" [(ngModel)]="user.email">
+                            </div>
+
+
+                        </div>
+
+                        <div class="row">
+                            <div class="form-group col-md-6 col-sm-6 ">
+                                <label> الرقم السري
+                </label>
+                                <input class="form-control" type="password" name="password" [(ngModel)]="user.password">
+                            </div>
+
+                            <div class="form-group col-md-6 col-sm-6 ">
+                                <label> تأكيد الرقم السري
+                </label>
+                                <input class="form-control" type="password" name="confirmPassword" [(ngModel)]="user.confirmPassword">
+                            </div>
+
+                        </div>
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mx-auto">
+                        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="save()">حفظ
+            </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mx-auto">
+                        <button type="button" class="btn bg-cancel btn-block " data-dismiss="modal" (click)="cancel()"> إلغاء
+            </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>
+</div>
+<!--end add-->
+<!-- Edit Modal-->
+<div class="modal fade" id="basicExampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-lg" role="document">
+
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+
+                    <div class="row">
+
+
+
+
+                        <div class="text-center">
+                            <a class="titleheader">
+                تعديل بيانات مستخدم </a>
+                        </div>
+                    </div>
+
+                </h5>
+
+            </div>
+            <div class="modal-body">
+                <div class="modal-body">
+                    <form>
+                        <div class="row">
+
+                            <div class="form-group col-md-6 col-sm-6">
+                                <label> الأسم الاول
+                </label>
+                                <input class="form-control" name="firstName" #firstName="ngModel" [(ngModel)]="userUpadte.firstName" autocomplete="off">
+                            </div>
+                            <div class="form-group col-md-6 col-sm-6">
+                                <label> اسم العائلة
+                </label>
+                                <input class="form-control" name="lastName" #lastName="ngModel" [(ngModel)]="userUpadte.lastName" autocomplete="off">
+                            </div>
+
+
+                        </div>
+
+
+
+                        <div class="row">
+                            <div class="form-group col-md-12 col-sm-6 ">
+                                <label> البريد الالكتروني
+                </label>
+                                <input class="form-control" type="email" name="email" #email="ngModel" [(ngModel)]="userUpadte.email">
+                            </div>
+
+
+                        </div>
+
+
+                        <div class="row">
+                            <div class="form-group col-md-12">
+                                <label> نوع الوظيفة  
+                           </label>
+                                <div class="dropdown">
+                                    <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                {{userJob}} 
+                            </button>
+                                    <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                        <a class="dropdown-item" *ngFor="let item of JobTitle  ; let i=index" (click)="getFilterSubsctypesCategory(item)"> {{item.NameAr}}</a>
+
+                                    </div>
+                                </div>
+                            </div>
+
+                        </div>
+
+
+                    </form>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mx-auto">
+                        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="updateData()">حفظ
+            </button>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-md-12 col-sm-12 mx-auto">
+                        <button type="button" class="btn bg-cancel btn-block " data-dismiss="modal" (click)="cancel()"> إلغاء
+            </button>
+
+                    </div>
+                </div>
+            </div>
+
+
+        </div>
+    </div>

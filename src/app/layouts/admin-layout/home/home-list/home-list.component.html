@@ -1,0 +1,116 @@
+<div class="main-content">
+
+    <nav class="navbar navbar-expand-lg    ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand titlePage">
+                    <i class="fas fa-user-tie"> </i> المحلات
+                </a>
+                <span> <i class="fas fa-arrow-circle-right"></i></span>
+
+
+                <a class="navbar-brand titlePage" (click)="navigateToAdd()">
+                    <i class="fas fa-plus-circle" (click)="navigateToAdd()"> </i> أضافة محل
+                </a>
+                <a class="textDrop"> المدينة</a>
+                <div class="col-md-6">
+
+                    <div class="dropdown">
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{CityName}}
+                        </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" *ngFor="let item of cityList  ; let i=index" (click)="getFilterSubsctypes(item)"> {{item.name}}</a>
+
+                        </div>
+                    </div>
+                </div>
+
+                <!-- <a class="textDrop"> القسم </a>
+                <div class="col-md-6">
+                    <div class="dropdown">
+
+                        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                {{categoryNames}}
+                  </button>
+                        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                            <a class="dropdown-item" *ngFor="let item of categoryList  ; let i=index" (click)="getFilterSubsctypesCategory(item)"> {{item.name}}</a>
+
+                        </div>
+                    </div>
+
+                </div> -->
+
+
+            </div>
+        </div>
+
+    </nav>
+    <div class="container-fluid">
+
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm12">
+                <div class="card card-plain">
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> الأسم </th>
+                                        <th scope="col">رقم الموبايل </th>
+                                        <th scope="col">القسم </th>
+                                        <th scope="col"> المدينة </th>
+                                        <th scope="col"> الصورة </th>
+                                        <th scope="col"> أختيارات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let prop of supplierList; let i=index">
+                                        <td> {{prop.name}}</td>
+                                        <td> {{prop.phoneNumber}}</td>
+                                        <td> {{prop.categoryName}}</td>
+                                        <td> {{prop.cityName}}</td>
+                                        <td><img style="width: 70px; height: 70px;" [src]='prop.imagePath'> </td>
+                                        <td>
+                                            <i class="fa  fa-edit " title="تعديل " (click)="navigateToEdit(prop.id)"></i>
+                                            <i class="fa fa-trash " title="مسح " (click)="delete(i)"></i>
+
+                                        </td>
+
+                                    </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+
+        <nav aria-label="Page navigation example">
+            <ul class="pagination ">
+                <li class="page-item " *ngFor="let item of data"><a class="page-link " (click)="navigate(item)"> 
+          {{item}}
+        </a></li>
+
+
+            </ul>
+            <div class="col text-center">
+                <h5> الصفحة المعروضه حاليا رقم <span class="activeNumber">   {{pageTitle}}  </span>
+                </h5>
+            </div>
+
+        </nav>
+    </div>
+</div>

@@ -1,0 +1,77 @@
+<div class="main-content">
+
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand titlePage">
+                   الشكاوي
+
+                </a>
+            </div>
+
+        </div>
+    </nav>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm12">
+                <div class="card card-plain">
+
+                    <div class="card-body">
+                        <div class="table-responsive">
+
+                            <table class="table table-bordered">
+                                <thead>
+                                    <tr>
+                                        <th scope="col"> الاسم الاول </th>
+                                        <th scope="col"> الاسم الثانى </th>
+                                        <th scope="col"> رقم الموبايل </th>
+                                        <th scope="col"> الشكوي </th>
+                                        <th scope="col"> أختيارات</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr *ngFor="let prop of problemList; let i=index">
+
+                                        <td> {{prop.firstName}}</td>
+                                        <td> {{prop.lastName}}</td>
+                                        <td> {{prop.phone}}</td>
+                                        <td> {{prop.message}}</td>
+                                        <td>
+
+                                            <i class="fa fa-trash " title="مسح " (click)="delete(i)"></i>
+
+                                        </td>
+                                    </tr>
+
+
+
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+
+
+
+        </div>
+
+        <!-- <nav aria-label="Page navigation example">
+      <ul class="pagination ">
+        <li class="page-item " *ngFor="let item of data"><a class="page-link " (click)="navigate(item)">
+            {{item}}
+          </a></li>
+
+
+      </ul>
+      <div class="col text-center">
+        <h5> الصفحة المعروضه حاليا رقم <span class="activeNumber"> {{pageTitle}} </span>
+        </h5>
+      </div>
+
+    </nav> -->
+    </div>
+</div>

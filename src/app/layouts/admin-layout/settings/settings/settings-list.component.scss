@@ -1,0 +1,461 @@
+@import"../../../admin-layout/language/language/language-list.component.scss";
+.navbar-absolute {
+    background-color: white;
+}
+
+.table-bordered {
+    border: 2px solid #1B5B84;
+}
+
+.fa-arrow-circle-right {
+    color: #1B5B84
+}
+
+th {
+    border: 2px solid #1B5B84;
+    border-bottom: 2px solid #1B5B84;
+    text-align: center;
+    color: #1B5B84;
+    font-family: Arabic;
+}
+
+td {
+    text-align: center;
+}
+
+.fa-edit {
+    color: #1B5B84
+}
+
+.fa-trash {
+    color: #1B5B84;
+    margin-right: 20px;
+}
+
+td {
+    border: 2px solid #1B5B84;
+    border-bottom: 2px solid #1B5B84;
+    // border-top: 3px solid transparent;
+}
+
+.titlePage {
+    color: #1B5B84 !important;
+    font-family: Arabic;
+}
+
+.fa-plus-circle:before {
+    content: "\f055";
+    margin-left: 5px;
+}
+
+.input100 {
+    font-family: Arabic;
+    font-size: 15px;
+    line-height: 1.2;
+    color: white;
+    height: 40px;
+    display: block;
+    background: white;
+    border-radius: 25px;
+    border-top-color: #1B5B84 !important;
+    border: 2px solid #1B5B84;
+    padding: 0 30px 0 53px;
+}
+
+.symbol-input100 {
+    font-size: 15px;
+    color: #1B5B84 !important;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    border-radius: 25px;
+    direction: ltr;
+    width: 21%;
+    bottom: 0;
+    height: 100%;
+    pointer-events: none;
+    -webkit-transition: all 0.4s;
+    -o-transition: all 0.4s;
+    -moz-transition: all 0.4s;
+    transition: all 0.4s;
+}
+
+ ::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
+    color: #1B5B84 !important;
+    opacity: 1;
+    /* Firefox */
+}
+
+ :-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
+    color: #1B5B84 !important;
+}
+
+ ::-ms-input-placeholder {
+    /* Microsoft Edge */
+    color: #1B5B84 !important;
+}
+
+.Title {
+    margin-top: 4px;
+    padding-left: 20%;
+}
+
+.form-control {
+    border: 2px solid #1B5B84;
+    height: 50px;
+}
+
+label {
+    float: right;
+    color: #1B5B84;
+    font-family: Arabic;
+}
+
+.btn {
+    font-size: 18px;
+    font-family: Arabic;
+}
+
+.dropdown-item {
+    font-size: 18px;
+    font-family: Arabic;
+    color: #00688f !important;
+    &:hover {
+        background-color: #00688f !important;
+        color: wheat !important;
+    }
+}
+
+.btn-secondary {
+    font-size: 18px;
+    font-family: Arabic;
+    color: #00688f !important;
+    width: 100%;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.main {
+    margin-top: 8%;
+}
+
+.services-image {
+    /* background:url("../../../../assets/img/user-image.png") no-repeat !important; */
+    background-position: center;
+    background-size: cover;
+}
+
+.fa-window-close:hover {
+    color: rgb(241, 35, 35);
+    cursor: pointer;
+}
+
+.fa-window-close {
+    font-size: 15pt;
+    position: relative;
+    left: 40px !important;
+}
+
+.fa-window-close:last-child {
+    font-size: 15pt;
+    position: relative;
+    left: 50px !important;
+}
+
+.checkbox-container.form-checkbox {
+    width: unset;
+    height: unset;
+    padding-left: 35px;
+}
+
+.checkbox-container {
+    display: inline-block;
+    position: relative;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    margin: 0px;
+}
+
+
+/* Hide the browser's default checkbox */
+
+.checkbox-container input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+
+/* Create a custom checkbox */
+
+.checkbox-container .checkmark {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 25px;
+    width: 25px;
+    display: block;
+    background-color: #4C5C68;
+    border-radius: 3px;
+}
+
+
+/* On mouse-over, add a grey background color */
+
+.checkbox-container:hover input~.checkmark {
+    background-color: #bbb;
+}
+
+
+/* When the checkbox is checked, add a blue background */
+
+.checkbox-container input:checked~.checkmark {
+    background-color: #4C5C68;
+}
+
+
+/* Create the checkmark/indicator (hidden when not checked) */
+
+.checkbox-container .checkmark:after {
+    content: "";
+    position: absolute;
+    display: none;
+}
+
+
+/* Show the checkmark when checked */
+
+.checkbox-container input:checked~.checkmark:after {
+    display: block;
+}
+
+
+/* Style the checkmark/indicator */
+
+.checkbox-container .checkmark:after {
+    left: 8px;
+    top: 3px;
+    width: 9px;
+    height: 16px;
+    border: solid white;
+    border-width: 0 4px 4px 0;
+    -webkit-transform: rotate(45deg);
+    -ms-transform: rotate(45deg);
+    transform: rotate(45deg);
+}
+
+.fa-trash {
+    color: rgb(97, 2, 2);
+    cursor: pointer;
+}
+
+.fa-edit {
+    color: rgba(3, 26, 47, 0.904);
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #49bcc4 !important;
+    font-family: Arabic;
+    font-size: 18px;
+}
+
+.btn-danger {
+    background-color: #0e5055 !important;
+    font-family: Arabic;
+    font-size: 18px;
+}
+
+h1 {
+    text-align: center;
+    margin: 50px auto;
+    font-weight: 100;
+}
+
+label {
+    font-weight: 500;
+    display: block;
+    margin: 4px 0;
+    text-transform: uppercase;
+    font-size: 18px;
+    overflow: hidden;
+    direction: rtl;
+    float: right;
+    font-family: Arabic;
+    color: #0e5055 !important;
+    span {
+        float: right;
+        text-transform: none;
+        font-weight: 200;
+        line-height: 1em;
+        font-style: italic;
+        opacity: 0.8;
+    }
+}
+
+.form-control {
+    color: #053777;
+    font-weight: 200;
+    border-radius: 7px;
+    margin-right: 4px;
+    font-size: 18px;
+    font-family: Arabic;
+    padding-right: 5px;
+    box-shadow: 0px 0px 2px 0px;
+    padding-right: 10px;
+    height: 50px;
+}
+
+button {
+    // padding: 8px 30px;
+    background: rgba(255, 255, 255, 0.8);
+    color: #053777;
+    text-transform: uppercase;
+    font-weight: 600;
+    font-size: 11px;
+    border: 0;
+    text-shadow: 0 1px 2px #fff;
+    cursor: pointer;
+}
+
+.dropdown-menu {
+    width: 100%;
+}
+
+.back-to-article {
+    color: #fff;
+    text-transform: uppercase;
+    font-size: 12px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    text-decoration: none;
+    display: inline-block;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 10px 18px;
+    transition: all 0.3s ease-in-out;
+    opacity: 0.6;
+    &:hover {
+        opacity: 1;
+        background: rgba(0, 0, 0, 0.8);
+    }
+}
+
+.fa {
+    cursor: pointer;
+}
+
+.fa-plus-square {
+    margin-left: 8px;
+    margin-right: 10px !important;
+}
+
+.fa-plus-square:before {
+    content: "\f0fe";
+    margin-right: 10px;
+}
+
+.modal-header {
+    display: -webkit-box;
+    display: flex;
+    -webkit-box-align: start;
+    align-items: flex-start;
+    -webkit-box-pack: justify;
+    justify-content: space-between;
+    padding: 1rem 1rem;
+    border-bottom: 1px solid #dee2e6;
+    border-top-left-radius: 0.3rem;
+    border-top-right-radius: 0.3rem;
+    background-color: #00688f;
+    justify-content: center;
+    color: white;
+}
+
+.modal-body {
+    position: relative;
+    -webkit-box-flex: 1;
+    flex: 1 1 auto;
+    padding: 1rem;
+    background-color: #e4dfdf7a;
+}
+
+.modal-content {
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.5);
+    border: 1px solid;
+    padding: 10px;
+    box-shadow: 5px 10px #00688f;
+}
+
+.upload-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -27px;
+    margin-bottom: -27px;
+    margin-left: -123px;
+    width: 200px;
+    height: 200px;
+    border: 1px dashed #00688f !important;
+}
+
+.upload-container p {
+    width: fit-content;
+    height: fit-content;
+    text-align: center;
+    line-height: 32px;
+    margin: auto;
+    color: #00688f !important;
+    font-family: ocean;
+    font-weight: bolder;
+    font-size: 14pt;
+    mix-blend-mode: multiply;
+}
+
+.upload-container input {
+    position: absolute !important;
+    margin: 0;
+    padding: 0;
+    width: 100%;
+    height: 100%;
+    outline: none;
+    opacity: 0;
+    display: block;
+}
+
+input[type=file] {
+    cursor: pointer;
+}
+
+.btn-primary {
+    background-color: #00688f !important;
+}
+
+.dropdown-item {
+    font-size: 18px;
+    font-family: Arabic;
+    color: #00688f !important;
+    &:hover {
+        background-color: #00688f !important;
+        color: wheat !important;
+    }
+}
+
+.btn-secondary {
+    font-size: 18px;
+    font-family: Arabic;
+    color: #00688f !important;
+    width: 100%;
+}

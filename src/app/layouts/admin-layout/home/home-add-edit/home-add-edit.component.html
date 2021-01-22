@@ -1,0 +1,86 @@
+<div class="main-content">
+
+
+    <div class="container">
+        <div class="row">
+            <div class="col-md-12">
+                <form name="form" #form="ngForm">
+
+                    <div class="row">
+                        <div class="form-group col-lg-6 col-sm-6 ">
+                            <label> الاسم  
+                            </label>
+                            <input class="form-control" [(ngModel)]="supplier.name" #name=ngModel name="name" [ngModelOptions]="{standalone: true}">
+                        </div>
+
+                        <div class="form-group col-lg-6 col-sm-6 ">
+                            <label> رقم الموبايل  
+                            </label>
+                            <input class="form-control" [(ngModel)]="supplier.phoneNumber" #phoneNumber=ngModel name="name">
+                        </div>
+
+                        <div class="form-group col-lg-6 col-sm-6 ">
+                            <label> نوع القسم 
+                       </label>
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                            {{categoryNames}}
+                        </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" *ngFor="let item of categoryList  ; let i=index" (click)="getFilterSubsctypesCategory(item)"> {{item.name}}</a>
+
+                                </div>
+                            </div>
+                        </div>
+
+
+                        <div class="form-group col-lg-6 col-sm-6 ">
+                            <label>  المدينة   
+                            </label>
+
+
+                            <div class="dropdown">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    {{CityName}}
+                                </button>
+                                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                                    <a class="dropdown-item" *ngFor="let item of cityList  ; let i=index" (click)="getFilterSubsctypes(item)"> {{item.name}}</a>
+
+                                </div>
+                            </div>
+
+
+                        </div>
+                    </div>
+
+
+
+
+
+
+                    <div class="row" style="margin-bottom: 25%; margin-top: 5%;">
+                        <div class="col-md-12 col-sm-12 mx-auto" style="position:relative;">
+                            <div class="upload-container services-image" #SlideImg>
+                                <input #image name="image" class=" " autocomplete="off" (change)="onFileChanged($event,'image')" type="file" accept="image/*">
+                                <p><i class="fa fa-window-close" (click)="changebackground(SlideImg,'UserImageURL',true,'image')"></i></p>
+                            </div>
+                        </div>
+                    </div>
+
+
+                </form>
+                <div class="row">
+                    <div class="col-md-6 col-sm-6 mx-auto">
+                        <button class="btn btn-primary btn-lg btn-block" type="button" (click)="save()">حفظ 
+              </button>
+                    </div>
+                    <div class="col-md-6 col-sm-6 mx-auto">
+                        <button type="button" class="btn btn-danger btn-lg btn-block" (click)="cancel()"> إلغاء </button>
+
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </div>
+</div>

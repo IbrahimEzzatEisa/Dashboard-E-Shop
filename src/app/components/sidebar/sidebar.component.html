@@ -1,0 +1,28 @@
+<div class="logo">
+    <a class="simple-text">
+        <img src="../../../assets/img/CAR (2).png" style=" width: 100px">
+    </a>
+</div>
+<div class="sidebar-wrapper" style="min-height: 100vh;">
+    <div *ngIf="isMobileMenu()">
+
+    </div>
+
+    <ul class="nav" style="direction: rtl;">
+
+        <li routerLinkActive="active" *ngFor="let menuItem of menuItems" class="{{menuItem.class}} nav-item">
+
+            <a class="nav-link" [routerLink]="[menuItem.path]">
+                <i class="material-icons">{{menuItem.icon}}</i>
+                <p>{{menuItem.title}}</p>
+            </a>
+        </li>
+
+
+        <li>
+            <a style="font-family: Arabic;" class="nav-link text-center" (click)="logout()">
+                <i class="fas fa-sign-out-alt fa-2x users"> </i> تسجيل الخروج
+            </a>
+        </li>
+    </ul>
+</div>

@@ -1,0 +1,101 @@
+<div class="main-content">
+
+    <nav class="navbar navbar-expand-lg  ">
+        <div class="container-fluid">
+            <div class="navbar-wrapper">
+                <a class="navbar-brand titlePage">
+                    <i class="fas fa-globe "> </i> من نحن
+
+                </a>
+                <span> <i class="fas fa-arrow-circle-right"></i></span>
+
+                <a class="navbar-brand titlePage">
+                 أضافة محتوي
+                </a>
+            </div>
+
+
+        </div>
+    </nav>
+
+    <p>
+    </p>
+    <div class="container-fluid">
+        <div class="row justify-content-center">
+            <div class="col-xl-12 col-lg-12 col-md-12 col-sm12">
+                <div class="card card-plain">
+
+                    <div class="card-body">
+                        <div class="form-group">
+                            <label for="exampleFormControlTextarea1">المحتوي </label>
+                            <textarea class="form-control" id="exampleFormControlTextarea1" rows="15" [(ngModel)]="about.content"></textarea>
+                        </div>
+                    </div>
+                    <div class="row">
+
+
+                        <div class="col-md-6 col-sm-12 mx-auto">
+                            <button class="btn btn-primary btn-lg btn-block" type="button" (click)="saveupdate()"> تعديل
+                          </button>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+
+
+        </div>
+
+    </div>
+
+</div>
+
+
+
+<div class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered  modal-lg" role="document">
+        <div class="modal-content">
+            <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">
+
+                    <div class="row">
+
+
+                        <div class="text-center">
+                            <a class="titleheader">
+                  أضافة محتوي  </a>
+
+                        </div>
+
+
+                    </div>
+
+                </h5>
+
+
+            </div>
+
+            <div class="form-group">
+                <label for="exampleFormControlTextarea1">المحتوي </label>
+                <textarea class="form-control" id="exampleFormControlTextarea1" rows="3" [(ngModel)]="about.content"></textarea>
+            </div>
+            <div class="row">
+                <div class="col-md-6 col-sm-12 mx-auto">
+                    <button class="btn btn-primary btn-lg btn-block" type="button" (click)="save()">حفظ
+                  </button>
+                </div>
+                <div class="col-md-6 col-sm-12 mx-auto">
+                    <button class="btn btn-primary btn-lg btn-block" type="button" (click)="saveupdate()"> تعديل
+                  </button>
+                </div>
+            </div>
+
+        </div>
+
+
+    </div>
+
+
+</div>
+
+<!--end add-->
